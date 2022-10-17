@@ -1,7 +1,7 @@
 public class CharString {
 
     public static void main(String[] args) {
-        char ch = 'c';
+        char ch == 'c';
         String st = Character.toString(ch);
         // Alternatively
         // st = String.valueOf(ch);
