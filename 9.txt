@@ -1,1 +1,16 @@
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.Initialized;
+import javax.enterprise.event.Observes;
+
+import com.example.event.LoggedInEvent;
+import com.example.model.Foo;
+
+class MyClass
+{
+    private void init(@Observes @Initialized(ApplicationScoped.class) Object init) { }
+
+    private void afterLogin(@Observes LoggedInEvent event) { }
+
+    private void afterFooUpdate(@Observes @Updated Foo foo) { }
+}
