@@ -1,1 +1,5 @@
-
+ @Test
+  void falsePositive() {
+    org.assertj.core.api.BDDAssertions.thenRuntimeException()
+        .isThrownBy(() -> System.out.println("hmm"));
+  }
