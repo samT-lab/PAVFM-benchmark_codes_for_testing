@@ -1,1 +1,11 @@
+public record Fraction(String numerator, String denominator) {
+ public static final RoundingMode ROUNDING_MODE = RoundingMode.HALF_UP;
+// Move this static variable to comply with Java Code Conventions.
+ public static final int DECIMAL_SCALE = 10;
+// Move this static variable to comply with Java Code Conventions.
 
+ public Fraction {
+ Objects.requireNonNull(numerator);
+ Objects.requireNonNull(denominator);
+ }
+}
