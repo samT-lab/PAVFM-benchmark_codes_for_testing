@@ -1,1 +1,11 @@
+public record SonarBug(int arg1, int arg2) {
+    public SonarBug(int arg1, int arg2) { // compliant
+        this.arg1 = arg1;
 
+        if (arg2 == 5) {
+            this.arg2 = 4;
+        } else {
+            this.arg2 = arg2;
+        }
+    }
+}
