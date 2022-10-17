@@ -1,1 +1,5 @@
 
+final Boolean cardEnabled = parseAndGet("card-enabled");
+cardButton.setVisible(
+    cardEnabled == null ? false : cardEnabled.booleanValue()
+);
