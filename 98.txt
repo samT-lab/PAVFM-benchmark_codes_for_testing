@@ -1,1 +1,10 @@
-
+public static void main(String[] args) throws IOException {
+    @Cleanup
+    InputStream in = new FileInputStream(args[0]);  // a false positive   
+    byte[] b = new byte[10000];
+    while (true) {
+        int r = in.read(b);
+        if (r == -1)
+            break;
+    }
+    }
