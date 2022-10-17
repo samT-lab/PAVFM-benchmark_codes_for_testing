@@ -1,1 +1,24 @@
+public class Unsynchronized {
 
+  public void compute() {
+  }
+
+  public void calculate() {
+  }
+}
+
+class SynchronizedOverride extends Unsynchronized {
+
+  @Override
+  public synchronized void compute() {
+    super.compute();
+  //^^^^^^^^^^^^^^^ raises an issue because only the super class implementation is called
+  }
+
+  @Override
+  public void calculate() {
+    synchronized (this) {
+      super.calculate();
+    }
+  }
+  }
