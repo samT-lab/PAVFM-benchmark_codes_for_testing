@@ -1,1 +1,11 @@
+public void setSaveTime(final Date saveTime)
+{
+	this.saveTime = saveTime;
+}
 
+
+
+public Date getSaveTime()
+{
+	return saveTime;
+}
