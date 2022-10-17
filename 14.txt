@@ -1,1 +1,14 @@
+public enum Position {
+    FIRST,
+    SECOND,
+    THIRD
+}
 
+public class TestClass {
+    public void testMethod(Position pos) {
+        switch (pos) {
+            case FIRST, SECOND -> doSomething();
+            case THIRD -> doSomethingElse();
+        }
+    }
+}
