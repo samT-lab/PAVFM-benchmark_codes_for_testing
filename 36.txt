@@ -1,1 +1,18 @@
+public static void main(String args[]) throws IOException, InterruptedException, AWTException, IllegalMonitorStateException
+   {   
+	Scanner sc = new Scanner(System.in);
+	TicTacToe ge = null;
+	//ge.clearScreen();
 
+	System.out.println("Do You Want To Continue Then Press Y If No The Press Any Key");
+	char yes = sc.next().charAt(0);
+	if(yes == 'Y' || yes == 'y')
+	{
+		 //TimeUnit.SECONDS.wait(10);
+		//ge.clearScreen();
+		//Thread.sleep(4000);
+		ge.game();
+		
+		
+    }
+   }
